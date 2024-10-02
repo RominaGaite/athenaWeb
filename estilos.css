@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+/*seccion carrusel*/
+#carrusel {
+    height: 70vh; /* El carrusel ocupa el 50% de la altura de la ventana */
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: none; /* Escondemos todas las slides menos la activa */
+    justify-content: center;
+    align-items: center;
+}
+
+.slide.active {
+    display: flex; /* Solo la slide activa será visible */
+}
+
+.slide img {
+    width: 100%; /* La imagen ocupará todo el ancho disponible */
+    height: auto; /* La altura se ajustará de manera proporcional al ancho */
+    object-fit: contain; /* Asegura que toda la imagen se vea sin recortarla */
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+/*seccion que hacemos*/
+#lo-que-hacemos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.img-seccionquehacemos{
+    margin: 10px;
+    width: 90%;
+   
+}
+.txt-seccionquehacemos{
+    margin: 10px;
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.txt_sec{
+    display: flex;
+    text-align: justify;
+    font-size: 1.2rem;
+    font-family: "Afacad Flux", sans-serif;
+    color: rgb(46, 3, 46);
+}
+/*seccion servicios*/
+#servicios {
+    text-align: center;
+    padding: 20px;
+}
+
+.tarjetas-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Hace que sea circular */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño en hover */
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformar */
+    border-radius: 50%; /* Mantiene la imagen circular */
+    transition: opacity 0.3s ease;
+}
+ h2{
+    margin-bottom: 15px;
+    font-family: "Afacad Flux", sans-serif;
+    color: rgb(46, 3, 46);
+ }
+.tarjeta p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1em;
+    color:  rgb(46, 3, 46);;
+    opacity: 0; /* Oculta el texto inicialmente */
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Al hacer clic, se muestra el texto y se oculta la imagen */
+.tarjeta.show-text img {
+    opacity: 0; /* Desaparece la imagen */
+}
+
+.tarjeta.show-text p {
+    opacity: 1; /* Muestra el texto */
+}
+
+
+.titulo {
+    text-align: center;
+    font-size: 2rem;
+    color:  rgb(46, 3, 46);;
+}
+.subtitulo {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Afacad Flux", sans-serif;
+    color: rgb(46, 3, 46);
+}
+#recursos {
+    text-align: center;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: rgb(77, 2, 85); 
+    margin: 15px auto; 
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 70%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    transition: transform 0.3s ease;
+    font-family: "Afacad Flux", sans-serif;
+}
+
+li:hover {
+    transform: translateY(-5px); /* Efecto sutil al hacer hover */
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Texto en blanco */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Espacio entre texto e icono */
+    align-items: center;
+}
+
+.descargar {
+    font-size: 0.9em; /* Tamaño más pequeño para el texto "Descargar" */
+}
+
+.icono-flecha {
+    font-size: 1.2em; /* Tamaño del ícono de flecha */
+    margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+    li {
+        width: 90%; /* En pantallas pequeñas, las tarjetas ocuparán el 90% del ancho */
+    }
+}
+
+/* Seccion formulario*/
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea, select {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #630372;
+    width: 100%;
+}
+label{
+    font-family: "Afacad Flux", sans-serif;
+    color: rgb(46, 3, 46);
+}
+.checkbox-group {
+    display: block;
+}
+
+.checkbox-group label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Aseguramos que ocupe todo el ancho */
+    margin-bottom: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-left: 10px; /* Agrega espacio entre el texto y el checkbox */
+}
+
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #630372;
+    color: white;
+    border: none;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #630372;
+}
+#toggleForm {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #007bff;
+}
+
+#toggleForm:hover {
+    color: #0056b3;
+}
+
+/* Formulario oculto por defecto */
+#contactForm {
+    display: none;
+}
+/* ajustes responsivos */
+@media (max-width: 768px) {
+    #carrusel {
+        height: 30vh;
+
+    }
+  
+    .slide img {
+        height: 30vh;
+       
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    form {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    .img-seccionquehacemos{
+        padding:5% 20% 5% 20%;
+        width:100%;
+        display: flex;
+        justify-content: center
+    }
+    #lo-que-hacemos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .txt-seccionquehacemos{
+        margin: 10px;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        
+    }
+}
+
+@media (max-width: 480px) {
+    #carrusel {
+        height: 30vh;
+    }
+
+    .slide img {
+        height: 30vh;
+    
+    }
+  
+
+    .controls button {
+        padding: 5px;
+    }
+
+    button[type="submit"] {
+        padding: 8px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+    .img-seccionquehacemos{
+        padding:5% 10%;
+        
+    }
+   
+}
