@@ -113,6 +113,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const form = event.target;
     const formData = new FormData(form);
 
+    // Muestra los datos que se enviarán en la consola
+    console.log(Object.fromEntries(formData.entries()));
+
     try {
         // Envío de datos a Formspree
         const response = await fetch('https://formspree.io/f/mqazrvwv', {
