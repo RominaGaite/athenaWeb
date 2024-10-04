@@ -113,15 +113,19 @@ document.getElementById('contactForm').addEventListener('submit', async function
     const form = event.target;
     const formData = new FormData(form);
 
-    // Muestra los datos que se enviarán en la consola
-    console.log(Object.fromEntries(formData.entries()));
+    // Convertir FormData a un objeto de JavaScript
+    const formObject = Object.fromEntries(formData.entries());
+
+    // Muestra los datos que se enviarán en la consola (en formato de objeto)
+    console.log(formObject);
 
     try {
-        // Envío de datos a Formspree
+        // Envío de datos a Formspree (en formato JSON)
         const response = await fetch('https://formspree.io/f/mqazrvwv', {
             method: 'POST',
-            body: formData,
+            body: JSON.stringify(formObject),  // Convertir los datos a JSON
             headers: {
+                'Content-Type': 'application/json',  // Establecer el encabezado para enviar JSON
                 'Accept': 'application/json'
             }
         });
