@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
+
 /*seccion carrusel*/
 #carrusel {
-    height: 70vh; /* El carrusel ocupa el 50% de la altura de la ventana */
+    height: 70vh;
+    /* El carrusel ocupa el 50% de la altura de la ventana */
     position: relative;
     overflow: hidden;
-    
+
 }
 
 .slider {
@@ -24,19 +28,24 @@ html, body {
 
 .slide {
     flex: 0 0 100%;
-    display: none; /* Escondemos todas las slides menos la activa */
+    display: none;
+    /* Escondemos todas las slides menos la activa */
     justify-content: center;
     align-items: center;
 }
 
 .slide.active {
-    display: flex; /* Solo la slide activa será visible */
+    display: flex;
+    /* Solo la slide activa será visible */
 }
 
 .slide img {
-    width: 100%; /* La imagen ocupará todo el ancho disponible */
-    height: auto; /* La altura se ajustará de manera proporcional al ancho */
-    object-fit: contain; /* Asegura que toda la imagen se vea sin recortarla */
+    width: 100%;
+    /* La imagen ocupará todo el ancho disponible */
+    height: auto;
+    /* La altura se ajustará de manera proporcional al ancho */
+    object-fit: contain;
+    /* Asegura que toda la imagen se vea sin recortarla */
 }
 
 .controls {
@@ -55,31 +64,36 @@ button {
     padding: 10px;
     cursor: pointer;
 }
+
 /*seccion que hacemos*/
-#lo-que-hacemos{
+#lo-que-hacemos {
     width: 100%;
     display: flex;
     flex-direction: row;
 }
-.img-seccionquehacemos{
+
+.img-seccionquehacemos {
     margin: 10px;
     width: 90%;
-   
+
 }
-.txt-seccionquehacemos{
+
+.txt-seccionquehacemos {
     margin: 10px;
     width: 80%;
     padding: 10px;
     display: flex;
     align-items: center;
 }
-.txt_sec{
+
+.txt_sec {
     display: flex;
     text-align: justify;
     font-size: 1.2rem;
     font-family: "Afacad Flux", sans-serif;
     color: rgb(46, 3, 46);
 }
+
 /*seccion servicios*/
 #servicios {
     text-align: center;
@@ -96,7 +110,8 @@ button {
 .tarjeta {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Hace que sea circular */
+    border-radius: 50%;
+    /* Hace que sea circular */
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -107,21 +122,26 @@ button {
 }
 
 .tarjeta:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño en hover */
+    transform: scale(1.05);
+    /* Aumenta ligeramente el tamaño en hover */
 }
 
 .tarjeta img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen sin deformar */
-    border-radius: 50%; /* Mantiene la imagen circular */
+    object-fit: cover;
+    /* Ajusta la imagen sin deformar */
+    border-radius: 50%;
+    /* Mantiene la imagen circular */
     transition: opacity 0.3s ease;
 }
- h2{
+
+h2 {
     margin-bottom: 15px;
     font-family: "Afacad Flux", sans-serif;
     color: rgb(46, 3, 46);
- }
+}
+
 .tarjeta p {
     position: absolute;
     top: 50%;
@@ -129,33 +149,40 @@ button {
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 1em;
-    color:  rgb(46, 3, 46);;
-    opacity: 0; /* Oculta el texto inicialmente */
+    color: rgb(46, 3, 46);
+    ;
+    opacity: 0;
+    /* Oculta el texto inicialmente */
     z-index: 1;
     transition: opacity 0.3s ease;
 }
 
 /* Al hacer clic, se muestra el texto y se oculta la imagen */
 .tarjeta.show-text img {
-    opacity: 0; /* Desaparece la imagen */
+    opacity: 0;
+    /* Desaparece la imagen */
 }
 
 .tarjeta.show-text p {
-    opacity: 1; /* Muestra el texto */
+    opacity: 1;
+    /* Muestra el texto */
 }
 
 
 .titulo {
     text-align: center;
     font-size: 2rem;
-    color:  rgb(46, 3, 46);;
+    color: rgb(46, 3, 46);
+    ;
 }
+
 .subtitulo {
     text-align: center;
     font-size: 1.5rem;
     font-family: "Afacad Flux", sans-serif;
     color: rgb(46, 3, 46);
 }
+
 #recursos {
     text-align: center;
     padding: 20px;
@@ -168,11 +195,11 @@ ul {
 }
 
 li {
-    background-color: rgb(77, 2, 85); 
-    margin: 15px auto; 
+    background-color: rgb(77, 2, 85);
+    margin: 15px auto;
     padding: 15px 20px;
     border-radius: 10px;
-    width: 70%; 
+    width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -182,30 +209,37 @@ li {
 }
 
 li:hover {
-    transform: translateY(-5px); /* Efecto sutil al hacer hover */
+    transform: translateY(-5px);
+    /* Efecto sutil al hacer hover */
 }
 
 a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: white; /* Texto en blanco */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: white;
+    /* Texto en blanco */
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Espacio entre texto e icono */
+    justify-content: space-between;
+    /* Espacio entre texto e icono */
     align-items: center;
 }
 
 .descargar {
-    font-size: 0.9em; /* Tamaño más pequeño para el texto "Descargar" */
+    font-size: 0.9em;
+    /* Tamaño más pequeño para el texto "Descargar" */
 }
 
 .icono-flecha {
-    font-size: 1.2em; /* Tamaño del ícono de flecha */
+    font-size: 1.2em;
+    /* Tamaño del ícono de flecha */
     margin-left: 8px;
 }
 
 @media (max-width: 768px) {
     li {
-        width: 90%; /* En pantallas pequeñas, las tarjetas ocuparán el 90% del ancho */
+        width: 90%;
+        /* En pantallas pequeñas, las tarjetas ocuparán el 90% del ancho */
     }
 }
 
@@ -225,40 +259,47 @@ label {
     margin-top: 10px;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     padding: 10px;
-    margin: 10px 0;
+    margin: 0;
     border-radius: 5px;
     border: 1px solid #630372;
     width: 100%;
 }
-label{
+
+label {
     font-family: "Afacad Flux", sans-serif;
     color: rgb(46, 3, 46);
-}
-.checkbox-group {
-    display: block;
+    
 }
 
-.checkbox-group label {
+#checkboxGroup {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; /* Aseguramos que ocupe todo el ancho */
-    margin-bottom: 10px;
+    flex-wrap: wrap;   /* Permite que los elementos se ajusten y no se amontonen */
 }
 
-.checkbox-group input[type="checkbox"] {
-    margin-left: 10px; /* Agrega espacio entre el texto y el checkbox */
+.checkbox-label {
+    display: inline-flex; /* Mantiene el checkbox y el texto en la misma línea */
+    align-items: center;  /* Alinea verticalmente ambos elementos */
+    margin-right: 15px;   /* Espacio entre los checkboxes */
+    margin-bottom: 10px;  /* Espacio entre líneas de checkboxes */
+    white-space: nowrap;  /* Evita que el texto se divida en dos líneas */
 }
+
+.checkbox-label input {
+    margin-right: 5px;    /* Espacio mínimo entre el checkbox y el texto */
+}
+
 
 
 button[type="submit"] {
-    padding: 10px;
+    padding: 10px 10px;
     background-color: #630372;
     color: white;
     border: none;
-    width: 80%;
+    width: 98%;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -266,6 +307,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #630372;
 }
+
 #toggleForm {
     display: block;
     margin: 20px auto;
@@ -283,16 +325,87 @@ button[type="submit"]:hover {
 #contactForm {
     display: none;
 }
+
+/*footer*/
+footer {
+    background-color:rgb(46, 3, 46); /* Violeta */
+    color: white;
+    padding: 20px 0;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  .footer-left {
+    text-align: left;
+    
+  }
+  
+  .footer-left p,
+  .footer-left a {
+    margin: 5px 0;
+  }
+  
+  .footer-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 8px;
+    background-color: #ffffff;
+    color:rgb(46, 3, 46);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  
+  .footer-button:hover {
+    background-color: #9e00b3;
+    color: white;
+  }
+  
+  .footer-center {
+    text-align: center;
+   
+  }
+  
+  .footer-logo {
+    width: 150px;
+  }
+  
+  .footer-right {
+    display: flex;
+    gap: 15px;
+    
+  }
+  
+  .footer-right a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .footer-right a:hover {
+    color: #f1c40f; /* Cambia de color al pasar sobre el icono */
+  }
+  
+
 /* ajustes responsivos */
 @media (max-width: 768px) {
     #carrusel {
         height: 30vh;
 
     }
-  
+
     .slide img {
         height: 30vh;
-       
+
     }
 
     section {
@@ -307,27 +420,43 @@ button[type="submit"]:hover {
     h2 {
         font-size: 1.5rem;
     }
-    .img-seccionquehacemos{
-        padding:5% 20% 5% 20%;
-        width:100%;
+
+    .img-seccionquehacemos {
+        padding: 5% 20% 5% 20%;
+        width: 100%;
         display: flex;
         justify-content: center
     }
-    #lo-que-hacemos{
+
+    #lo-que-hacemos {
         width: 100%;
         display: flex;
         flex-direction: column;
-       
+
     }
-    .txt-seccionquehacemos{
+
+    .txt-seccionquehacemos {
         margin: 10px;
         width: 100%;
         padding: 20px;
         display: flex;
         align-items: center;
         justify-items: center;
-        
+
     }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footer-left,
+      .footer-right {
+        margin-bottom: 20px;
+      }
+    
+      .footer-center {
+        margin-bottom: 20px;
+      }
 }
 
 @media (max-width: 480px) {
@@ -337,9 +466,9 @@ button[type="submit"]:hover {
 
     .slide img {
         height: 30vh;
-    
+
     }
-  
+
 
     .controls button {
         padding: 5px;
@@ -349,12 +478,14 @@ button[type="submit"]:hover {
         padding: 8px;
     }
 
-    input, textarea {
+    input,
+    textarea {
         font-size: 14px;
     }
-    .img-seccionquehacemos{
-        padding:5% 10%;
-        
+
+    .img-seccionquehacemos {
+        padding: 5% 10%;
+
     }
-   
+
 }

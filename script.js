@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
 //funcion tarjetas servicios
 
 document.querySelectorAll('.tarjeta').forEach(tarjeta => {
-    tarjeta.addEventListener('click', function() {
+    tarjeta.addEventListener('click', function () {
         this.classList.toggle('show-text'); // Cambia la clase para mostrar el texto
     });
 });
 
 //funcion formularios 
- // Función para mostrar/ocultar el formulario
- document.getElementById('toggleForm').addEventListener('click', function() {
+// Función para mostrar/ocultar el formulario
+document.getElementById('toggleForm').addEventListener('click', function () {
     const form = document.getElementById('contactForm');
     if (form.style.display === 'none' || form.style.display === '') {
         form.style.display = 'block';
@@ -86,16 +86,19 @@ const generarMeses = () => {
 const generarTemasInteres = () => {
     const temas = [
         'Identidad digital', 'Grooming', 'Estafas virtuales', 'Redes sociales',
-        'Ciberbullying', 'Ciberacoso', 'Loveboombing'
+        'Ciberbullying', 'Ciberacoso', 'Loveboombing', 'Huella Digital', 'Seguridad en línea', 'Ludopatía en la red', 'Sextorsión','Riesgos en Linea', 'Estafas Piramidales', 'Concientización y capacitación para empresas',
+
     ];
 
     const checkboxGroup = document.getElementById('checkboxGroup');
     temas.forEach(tema => {
         const label = document.createElement('label');
-        label.innerHTML = `<input name="tema" type="checkbox"  value="${tema}"> ${tema}`;
+        label.classList.add('checkbox-label');  // Añadimos una clase para aplicar el CSS
+        label.innerHTML = `<input name="tema" type="checkbox" value="${tema}"> ${tema}`;
         checkboxGroup.appendChild(label);
     });
 };
+
 
 // Llamada a las funciones al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
@@ -103,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generarTemasInteres();
 });
 
-document.getElementById('contactForm').addEventListener('submit', async function(event) {
+document.getElementById('contactForm').addEventListener('submit', async function (event) {
     event.preventDefault();
 
     // Obtiene los datos del formulario
