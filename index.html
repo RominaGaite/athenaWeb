@@ -2,6 +2,15 @@
 <html lang="es">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQY5Y578CD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GQY5Y578CD');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concientización y Prevención | Athena Cyberguardians</title>
@@ -44,8 +53,9 @@
                 alt="imagen charla">
         </div>
         <div class="txt-seccionquehacemos">
-           
-            <p class="txt_sec">Somos una organización dedicada a la concientización digital, enfocadas en el uso responsable de las
+
+            <p class="txt_sec">Somos una organización dedicada a la concientización digital, enfocadas en el uso
+                responsable de las
                 tecnologías.
                 Brindamos charlas sobre grooming, sharenting, identidad digital, ciberbullying, estafas virtuales y
                 demás problemáticas que surgen en tiempos de digitalización, en colegios, clubes, y distintas
@@ -72,123 +82,132 @@
             </div>
         </div>
     </section>
-    
+
 
     <!-- Sección Material Descargable -->
 
-      
-        <section id="recursos">
-            <h2 class="titulo">Material Descargable</h2>
-            <p class="subtitulo">Accede a nuestros recursos gratuitos</p>
-            <ul>
-                <li>
-                    <a href="/documentos/PRÓXIMAMENTE (2).pdf" download>
-                        Guía de seguridad en redes sociales 
-                        <span class="descargar">Descargar <i class="icono-flecha">➔</i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/documentos/PRÓXIMAMENTE (2).pdf" download>
-                        Manual de prevención de grooming 
-                        <span class="descargar">Descargar <i class="icono-flecha">➔</i></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/documentos/PRÓXIMAMENTE (2).pdf" download>
-                        Guía de prevención de estafas virtuales 
-                        <span class="descargar">Descargar <i class="icono-flecha">➔</i></span>
-                    </a>
-                </li>
-            </ul>
-        </section>
-   
+
+    <section id="recursos">
+        <h2 class="titulo">Material Descargable</h2>
+        <p class="subtitulo">Accede a nuestros recursos gratuitos</p>
+        <ul>
+            <li>
+                <a href="/documentos/PRÓXIMAMENTE (2).pdf" download>
+                    Guía de seguridad en redes sociales
+                    <span class="descargar">Descargar <i class="icono-flecha">➔</i></span>
+                </a>
+            </li>
+            <li>
+                <a href="/documentos/PRÓXIMAMENTE (2).pdf" download>
+                    Manual de prevención de grooming
+                    <span class="descargar">Descargar <i class="icono-flecha">➔</i></span>
+                </a>
+            </li>
+            <li>
+                <a href="/documentos/PRÓXIMAMENTE (2).pdf" download>
+                    Guía de prevención de estafas virtuales
+                    <span class="descargar">Descargar <i class="icono-flecha">➔</i></span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
 
     <!-- Formulario de contacto -->
     <section id="contacto">
-       
-
-<!-- Botón para mostrar/ocultar el formulario -->
-<div id="toggleForm"> <h2 class="titulo">Formulario de Contacto</h2></div>
-
-<form id="contactForm">
-    <!-- Datos adicionales -->
-    <label  for="institucion">Nombre de la institución/club/empresa</label>
-    <input type="text" id="institucion" name="institucion" required>
-
-    <label for="direccion">Dirección</label>
-    <input type="text" id="direccion" name="direccion" required>
-
-    <label for="telefono">Teléfono</label>
-    <input type="tel" id="telefono" name="telefono" required>
-
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre" required>
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
-
-    <!-- Tema de interés en checkboxes generados dinámicamente -->
-    <label class="subtitulo">Tema de interés</label>
-    <div id="checkboxGroup"></div>
 
 
-    <!-- Fecha para programar la charla -->
-    <label for="fecha">Seleccione el mes y semana para la charla</label>
-    <select id="mes" name="mes" required></select>
+        <!-- Botón para mostrar/ocultar el formulario -->
+        <div id="toggleForm">
+            <h2 class="titulo">Formulario de Contacto</h2>
+        </div>
 
-    <select id="semana" name="semana" required>
-        <option value="">Seleccionar semana</option>
-        <option value="Semana 1">Semana 1</option>
-        <option value="Semana 2">Semana 2</option>
-        <option value="Semana 3">Semana 3</option>
-        <option value="Semana 4">Semana 4</option>
-    </select>
+        <form id="contactForm">
+            <!-- Datos adicionales -->
+            <label for="institucion">Nombre de la institución/club/empresa</label>
+            <input type="text" id="institucion" name="institucion" required>
 
-    <!-- Rango horario -->
-    <label for="rango_horario">Seleccione el rango horario:</label>
-    <select id="rango_horario" name="rango_horario" required>
-        <option value="Mañana">Turno Mañana</option>
-        <option value="Tarde">Turno Tarde</option>
-        <option value="Ambos">Ambos Turnos</option>
-    </select>
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" required>
 
-    <!-- Cantidad estimada de asistentes -->
-    <label for="asistentes">Cantidad estimada de asistentes:</label>
-    <input type="number" id="asistentes" name="asistentes" min="1" required>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
 
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-    <button type="submit">Enviar</button>
-</form>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Tema de interés en checkboxes generados dinámicamente -->
+            <label class="subtitulo">Tema de interés</label>
+            <div id="checkboxGroup"></div>
+
+
+            <!-- Fecha para programar la charla -->
+            <label for="fecha">Seleccione el mes y semana para la charla</label>
+            <select id="mes" name="mes" required></select>
+
+            <select id="semana" name="semana" required>
+                <option value="">Seleccionar semana</option>
+                <option value="Semana 1">Semana 1</option>
+                <option value="Semana 2">Semana 2</option>
+                <option value="Semana 3">Semana 3</option>
+                <option value="Semana 4">Semana 4</option>
+            </select>
+
+            <!-- Rango horario -->
+            <label for="rango_horario">Seleccione el rango horario:</label>
+            <select id="rango_horario" name="rango_horario" required>
+                <option value="Mañana">Turno Mañana</option>
+                <option value="Tarde">Turno Tarde</option>
+                <option value="Ambos">Ambos Turnos</option>
+            </select>
+
+            <!-- Cantidad estimada de asistentes -->
+            <label for="asistentes">Cantidad estimada de asistentes:</label>
+            <input type="number" id="asistentes" name="asistentes" min="1" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
 
     </section>
     <footer>
         <div class="footer-container">
-          <!-- Sección izquierda -->
-          <div class="footer-left">
-            <p>Contáctanos <a href="mailto:athenacyberguardians@gmail.com">athenacyberguardians@gmail.com</a></p>
-            <a href="https://forms.gle/kGdgsZGzfuu4k2sa6" target="_blank" class="footer-button">¿Queres ser voluntario?</a>
-            <a href="https://forms.gle/ybW8PjE7R6FcGeoo7" target="_blank" class="footer-button">¿Queres ser colaborador?</a>
-          </div>
-      
-          <!-- Sección central -->
-          <div class="footer-center">
-            <img src="/imagenes/LOGO BLANCO- PROYECTO ATHENA.png" alt="Logo" class="footer-logo">
-          </div>
-      
-          <!-- Sección derecha -->
-          <div class="footer-right">
-            <a href="https://www.facebook.com/share/p/gKYZ1LuqdxjJ2QgM/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.tiktok.com/@athena.cyberguardians" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.youtube.com/@Athena.CyberGuardians" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/company/cyberguardians" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/athenacyberguardians/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://ar.pinterest.com/acyberguardians/" target="_blank"><i class="fab fa-pinterest"></i></a>
-          </div>
+            <!-- Sección izquierda -->
+            <div class="footer-left">
+                <p>Contáctanos <a href="mailto:athenacyberguardians@gmail.com">athenacyberguardians@gmail.com</a></p>
+                <a href="https://forms.gle/kGdgsZGzfuu4k2sa6" target="_blank" class="footer-button">¿Queres ser
+                    voluntario?</a>
+                <a href="https://forms.gle/ybW8PjE7R6FcGeoo7" target="_blank" class="footer-button">¿Queres ser
+                    colaborador?</a>
+            </div>
+
+            <!-- Sección central -->
+            <div class="footer-center">
+                <img src="/imagenes/LOGO BLANCO- PROYECTO ATHENA.png" alt="Logo" class="footer-logo">
+            </div>
+
+            <!-- Sección derecha -->
+            <div class="footer-right">
+                <a href="https://www.facebook.com/share/p/gKYZ1LuqdxjJ2QgM/" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@athena.cyberguardians" target="_blank"><i
+                        class="fab fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@Athena.CyberGuardians" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/company/cyberguardians" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/athenacyberguardians/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://ar.pinterest.com/acyberguardians/" target="_blank"><i class="fab fa-pinterest"></i></a>
+            </div>
         </div>
-      </footer>
-      
+    </footer>
+
     <script src="/script.js"></script>
 </body>
 
